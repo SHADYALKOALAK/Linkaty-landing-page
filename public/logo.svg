@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 160" width="200" height="80">
+  <defs>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1F3292"/>
+      <stop offset="100%" stop-color="#9F27D6"/>
+    </linearGradient>
+  </defs>
+  <!-- Network icon -->
+  <g transform="translate(10, 8)">
+    <!-- Lines -->
+    <line x1="28" y1="28" x2="52" y2="12" stroke="url(#logoGrad)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="28" y1="28" x2="52" y2="44" stroke="url(#logoGrad)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="28" y1="28" x2="4" y2="44" stroke="url(#logoGrad)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="28" y1="28" x2="4" y2="12" stroke="url(#logoGrad)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="4" y1="12" x2="52" y2="12" stroke="url(#logoGrad)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="4" y1="44" x2="52" y2="44" stroke="url(#logoGrad)" stroke-width="3" stroke-linecap="round"/>
+    <!-- Nodes -->
+    <circle cx="28" cy="28" r="7" fill="url(#logoGrad)"/>
+    <circle cx="52" cy="12" r="7" fill="url(#logoGrad)"/>
+    <circle cx="52" cy="44" r="7" fill="url(#logoGrad)"/>
+    <circle cx="4" cy="12" r="7" fill="url(#logoGrad)"/>
+    <circle cx="4" cy="44" r="7" fill="url(#logoGrad)"/>
+    <!-- Ring -->
+    <circle cx="52" cy="28" r="10" fill="none" stroke="url(#logoGrad)" stroke-width="3"/>
+  </g>
+  <!-- Text -->
+  <text x="80" y="52" font-family="IBM Plex Sans, Arial, sans-serif" font-weight="700" font-size="36" fill="#1e293b">Linkaty</text>
+  <text x="80" y="72" font-family="IBM Plex Sans, Arial, sans-serif" font-weight="400" font-size="11" fill="#64748b">Creator Identity &amp; Networking Platform</text>
+</svg>

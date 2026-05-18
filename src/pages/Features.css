@@ -1,0 +1,42 @@
+.f-hero { padding: 140px 0 60px; background: linear-gradient(180deg, #f8f9fc 0%, #fff 100%); }
+.f-hero .hl { background: var(--gradient-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+.fd-card {
+  display: flex; align-items: center; gap: 48px; padding: 40px;
+  border-radius: var(--radius-lg); background: var(--bg-card);
+  border: 1px solid var(--border); transition: all var(--transition);
+  margin-bottom: 24px;
+}
+.fd-card:hover { box-shadow: var(--shadow-lg); border-color: rgba(159,39,214,0.15); }
+.fd-rev { flex-direction: row-reverse; }
+.fd-icon {
+  width: 96px; height: 96px; border-radius: 24px;
+  background: linear-gradient(135deg, rgba(31,50,146,0.08), rgba(159,39,214,0.08));
+  display: flex; align-items: center; justify-content: center; font-size: 36px; color: var(--accent);
+  transition: all var(--transition);
+}
+.fd-card:hover .fd-icon { background: var(--gradient); color: #fff; transform: scale(1.05); }
+.fd-content { flex: 1; position: relative; }
+.fd-n { position: absolute; top: -8px; right: 0; font-size: 56px; font-weight: 700; color: rgba(31,50,146,0.05); line-height: 1; font-family: var(--font-en); }
+.fd-content h2 { font-size: 24px; font-weight: 600; margin-bottom: 10px; }
+.fd-content p { font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px; }
+.fd-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+.fd-tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 14px; border-radius: 50px;
+  background: linear-gradient(135deg, rgba(31,50,146,0.06), rgba(159,39,214,0.06));
+  font-size: 13px; font-weight: 500; color: var(--text-secondary);
+}
+.fd-tag i { color: var(--accent); font-size: 11px; }
+
+[dir="rtl"] .fd-n { right: auto; left: 0; }
+[dir="rtl"] .fd-tag i { margin-left: 0; margin-right: 0; }
+
+@media (max-width: 768px) {
+  .f-hero { padding: 100px 0 40px; }
+  .f-hero h1 { font-size: 30px !important; }
+  .fd-card { flex-direction: column !important; gap: 24px; padding: 28px 20px; }
+  .fd-icon { width: 64px; height: 64px; font-size: 24px; border-radius: 16px; }
+  .fd-content h2 { font-size: 20px; }
+  .fd-n { font-size: 40px; }
+}

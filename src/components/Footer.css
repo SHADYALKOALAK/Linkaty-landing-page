@@ -1,0 +1,43 @@
+.footer {
+  background: var(--bg-alt);
+  border-top: 1px solid var(--border);
+  padding: 64px 0 32px;
+}
+.footer-inner { display: flex; flex-direction: column; gap: 40px; }
+
+.footer-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
+.footer-brand { display: flex; align-items: center; gap: 14px; }
+.footer-logo-img { height: 40px; width: auto; flex-shrink: 0; }
+.footer-name { font-size: 18px; font-weight: 700; color: var(--text); }
+.footer-tag { font-size: 13px; color: var(--text-muted); }
+
+.footer-social { display: flex; gap: 12px; }
+.footer-social a {
+  width: 38px; height: 38px; border-radius: 50%; background: var(--bg);
+  border: 1px solid var(--border); display: flex; align-items: center; justify-content: center;
+  color: var(--text-muted); transition: all var(--transition);
+}
+.footer-social a:hover { background: var(--gradient); color: #fff; border-color: transparent; transform: translateY(-3px); }
+
+.footer-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; padding-top: 32px; border-top: 1px solid var(--border); }
+.footer-col h4 { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.5px; }
+.footer-col a { display: block; font-size: 14px; color: var(--text-secondary); margin-bottom: 10px; transition: color var(--transition); }
+.footer-col a:hover { color: var(--primary); }
+
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; padding-top: 24px; border-top: 1px solid var(--border); font-size: 13px; color: var(--text-muted); }
+
+.footer-lang {
+  margin-inline-start: 12px;
+  vertical-align: middle;
+}
+
+[dir="rtl"] .footer-cols { text-align: right; }
+
+@media (max-width: 768px) {
+  .footer { padding: 48px 0 24px; }
+  .footer-top { flex-direction: column; text-align: center; }
+  .footer-brand { flex-direction: column; text-align: center; }
+  .footer-cols { grid-template-columns: 1fr; text-align: center; gap: 24px; }
+  [dir="rtl"] .footer-cols { text-align: center; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
