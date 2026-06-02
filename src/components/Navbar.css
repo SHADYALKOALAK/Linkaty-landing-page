@@ -18,10 +18,11 @@
 
 .nav-inner { display: flex; align-items: center; justify-content: space-between; }
 
-.nav-brand { display: flex; align-items: center; gap: 10px; font-size: 20px; font-weight: 700; color: var(--text); }
+.nav-brand { display: flex; align-items: center; gap: 10px; font-size: 20px; font-weight: 700; color: var(--text); flex-shrink: 0; }
 .nav-logo-img { height: 36px; width: auto; flex-shrink: 0; }
 .nav-ar { font-weight: 400; color: var(--text-muted); font-size: 16px; }
 
+/* ─── Desktop Nav Links ─── */
 .nav-links { display: flex; align-items: center; gap: 24px; }
 .nav-link {
   font-size: 14px; font-weight: 500; color: var(--text-secondary);
@@ -37,8 +38,8 @@
 .nav-link.active { color: var(--primary); }
 .nav-link.active::after { width: 100%; }
 
+/* ─── Nav Right ─── */
 .nav-cta-btn { padding: 10px 22px !important; font-size: 14px !important; }
-
 .nav-right { display: flex; align-items: center; gap: 12px; }
 
 .lang-toggle {
@@ -54,37 +55,108 @@
   font-family: var(--font-en);
   letter-spacing: 0.5px;
 }
-
 .lang-toggle:hover {
   background: var(--gradient);
   color: #fff;
   border-color: transparent;
 }
 
-.nav-toggle { display: none; background: none; border: none; color: var(--text); font-size: 22px; cursor: pointer; padding: 4px; }
+.nav-toggle { display: none; background: none; border: none; color: var(--text); font-size: 22px; cursor: pointer; padding: 4px; transition: transform 0.3s ease; }
+.nav-toggle.rotated { transform: rotate(90deg); }
+
+.nav-overlay {
+  display: none;
+}
+
+/* ─── Mobile Menu ─── */
+@media (max-width: 900px) {
+  .nav-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 998;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+  }
+  .nav-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-links {
+    display: flex;
+    position: fixed;
+    top: 0; right: 0;
+    width: 300px;
+    height: 100vh;
+    height: 100dvh;
+    z-index: 999;
+    flex-direction: column;
+    background: #fff;
+    padding: 80px 32px 32px;
+    gap: 6px;
+    border-left: 1px solid var(--border);
+    box-shadow: -8px 0 32px rgba(0,0,0,0.08);
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: auto;
+  }
+  .nav-links.open { transform: translateX(0); }
+
+  [dir="rtl"] .nav-links {
+    right: auto; left: 0;
+    border-left: none;
+    border-right: 1px solid var(--border);
+    box-shadow: 8px 0 32px rgba(0,0,0,0.08);
+    transform: translateX(-100%);
+  }
+  [dir="rtl"] .nav-links.open { transform: translateX(0); }
+
+  .nav-link {
+    font-size: 16px;
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: var(--radius-sm);
+    transition: background var(--transition), color var(--transition);
+  }
+  .nav-link::after { display: none; }
+  .nav-link:hover { background: var(--bg-alt); }
+  .nav-link.active {
+    background: linear-gradient(135deg, rgba(31,50,146,0.06), rgba(159,39,214,0.06));
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .nav-links .nav-cta-btn {
+    display: flex;
+    margin-top: auto;
+    width: 100%;
+    justify-content: center;
+    padding: 14px 22px !important;
+    font-size: 15px !important;
+  }
+
+  .nav-cta-btn.nav-cta-desktop { display: none; }
+
+  .nav-toggle { display: block; z-index: 1000; position: relative; }
+  .nav-name { font-size: 18px; }
+}
+
+@media (min-width: 901px) {
+  .nav-links .nav-cta-btn { display: none; }
+}
 
 /* ─── RTL Navbar ─── */
 [dir="rtl"] .nav-link::after { left: auto; right: 0; }
 
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    position: absolute; top: 100%; left: 0; right: 0;
-    flex-direction: column;
-    background: rgba(255,255,255,0.98);
-    backdrop-filter: blur(16px);
-    padding: 20px 24px; gap: 16px;
-    border-bottom: 1px solid var(--border);
-    box-shadow: var(--shadow-md);
-  }
-  .nav-links.open { display: flex; }
-  .nav-link { font-size: 16px; width: 100%; }
-  .nav-toggle { display: block; }
-  .nav-name { font-size: 18px; }
-}
-
+/* ─── Small Phones ─── */
 @media (max-width: 480px) {
   .nav-cta-btn { padding: 8px 14px !important; font-size: 12px !important; }
-  .nav-cta-btn i { display: none; }
+  .nav-cta-desktop i { display: none; }
   .nav-logo-img { height: 28px; }
+  .nav-links { width: 280px; padding: 72px 24px 24px; }
 }

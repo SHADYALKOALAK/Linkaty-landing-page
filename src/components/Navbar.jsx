@@ -17,6 +17,11 @@ export default function Navbar() {
 
   useEffect(() => { setOpen(false) }, [pathname])
 
+  useEffect(() => {
+    document.body.style.overflow = open ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [open])
+
   const links = [
     { label: t('nav.home'), path: '/' },
     { label: t('nav.features'), path: '/features' },
@@ -41,19 +46,28 @@ export default function Navbar() {
               {l.label}
             </Link>
           ))}
+          <a href="#download" className="btn btn-primary nav-cta-btn">
+            <i className="fas fa-download" /> {t('nav.cta')}
+          </a>
         </div>
 
         <div className="nav-right">
-          <a href="#download" className="btn btn-primary nav-cta-btn">
+          <a href="#download" className="btn btn-primary nav-cta-btn nav-cta-desktop">
             <i className="fas fa-download" /> {t('nav.cta')}
           </a>
           <button className="lang-toggle" onClick={toggleLanguage} aria-label="Toggle language">
             {lang === 'en' ? 'AR' : 'EN'}
           </button>
-          <button className="nav-toggle" onClick={() => setOpen(!open)} aria-label="Toggle menu">
+          <button
+            className={`nav-toggle${open ? ' rotated' : ''}`}
+            onClick={() => setOpen(!open)}
+            aria-label="Toggle menu"
+          >
             <i className={`fas ${open ? 'fa-xmark' : 'fa-bars'}`} />
           </button>
         </div>
+
+        <div className={`nav-overlay${open ? ' visible' : ''}`} onClick={() => setOpen(false)} />
       </div>
     </nav>
   )

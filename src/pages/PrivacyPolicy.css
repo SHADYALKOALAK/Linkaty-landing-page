@@ -21,7 +21,21 @@
 
 @media (max-width: 768px) {
   .p-hero { padding: 100px 0 30px; }
-  .p-hero-title { font-size: 30px !important; }
-  .p-content { padding: 28px 20px; }
-  .p-block h2 { font-size: 19px; }
+  .p-hero-title { font-size: 28px !important; }
+  .p-hero-date { font-size: 13px; }
+  .p-content { padding: 24px 20px; }
+  .p-intro { font-size: 14px; margin-bottom: 28px; padding-bottom: 20px; }
+  .p-block h2 { font-size: 18px; }
+  .p-block p { font-size: 14px; }
+  .p-block ul li { font-size: 14px; }
+}
+
+@media (max-width: 480px) {
+  .p-hero { padding: 88px 0 24px; }
+  .p-hero-title { font-size: 24px !important; }
+  .p-content { padding: 20px 16px; border-radius: var(--radius); }
+  .p-intro { font-size: 13px; }
+  .p-block { margin-bottom: 24px; }
+  .p-block h2 { font-size: 16px; }
+  .p-contact { font-size: 13px; padding: 12px 16px; }
 }

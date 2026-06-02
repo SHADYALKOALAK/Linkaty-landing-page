@@ -28,7 +28,7 @@ export default function Footer() {
           <div className="footer-col">
             <h4>{t('footer.product')}</h4>
             <Link to="/features">{t('nav.features')}</Link>
-            <Link to="/">{t('footer.pricing')}</Link>
+            <a href="#download">{t('nav.cta')}</a>
             <Link to="/about">{t('nav.about')}</Link>
           </div>
           <div className="footer-col">

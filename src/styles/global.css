@@ -188,14 +188,18 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 @media (max-width: 768px) {
-  .section { padding: 64px 0; }
-  .section-header h2 { font-size: 28px; }
+  .section { padding: 56px 0; }
+  .section-header { margin-bottom: 40px; }
+  .section-header h2 { font-size: 26px; }
   .section-header p { font-size: 15px; }
+  .section-label { font-size: 12px; padding: 5px 14px; }
   .btn { padding: 12px 24px; font-size: 14px; }
 }
 
 @media (max-width: 480px) {
   .container { padding: 0 16px; }
-  .section { padding: 48px 0; }
-  .section-header h2 { font-size: 24px; }
+  .section { padding: 40px 0; }
+  .section-header { margin-bottom: 32px; }
+  .section-header h2 { font-size: 22px; }
+  .section-header p { font-size: 14px; }
 }

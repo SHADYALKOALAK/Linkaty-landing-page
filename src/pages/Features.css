@@ -32,11 +32,28 @@
 [dir="rtl"] .fd-n { right: auto; left: 0; }
 [dir="rtl"] .fd-tag i { margin-left: 0; margin-right: 0; }
 
+@media (max-width: 900px) {
+  .fd-icon { width: 72px; height: 72px; font-size: 28px; border-radius: 20px; }
+  .fd-content h2 { font-size: 21px; }
+}
+
 @media (max-width: 768px) {
   .f-hero { padding: 100px 0 40px; }
-  .f-hero h1 { font-size: 30px !important; }
-  .fd-card { flex-direction: column !important; gap: 24px; padding: 28px 20px; }
-  .fd-icon { width: 64px; height: 64px; font-size: 24px; border-radius: 16px; }
-  .fd-content h2 { font-size: 20px; }
-  .fd-n { font-size: 40px; }
+  .f-hero h1 { font-size: 28px !important; }
+  .fd-card { flex-direction: column !important; gap: 24px; padding: 24px 20px; text-align: center; }
+  .fd-card:hover { transform: none; }
+  .fd-icon { width: 60px; height: 60px; font-size: 24px; border-radius: 16px; margin: 0 auto; }
+  .fd-content h2 { font-size: 19px; }
+  .fd-n { font-size: 36px; }
+  .fd-tags { justify-content: center; }
+}
+
+@media (max-width: 480px) {
+  .f-hero { padding: 88px 0 32px; }
+  .f-hero h1 { font-size: 24px !important; }
+  .fd-card { padding: 20px 16px; gap: 16px; }
+  .fd-icon { width: 52px; height: 52px; font-size: 20px; }
+  .fd-content h2 { font-size: 17px; }
+  .fd-content p { font-size: 14px; }
+  .fd-tag { font-size: 12px; padding: 5px 12px; }
 }

@@ -217,6 +217,7 @@
 .dl-feat p { font-size: 13px; color: var(--text-secondary); }
 .download-btn { display: inline-flex; align-items: center; gap: 10px; }
 
+/* ─── Responsive: Tablet ─── */
 @media (max-width: 1024px) {
   .hero-grid { gap: 40px; }
   .hero-content h1 { font-size: 40px; }
@@ -226,32 +227,67 @@
   .hi-card { font-size: 12px; padding: 10px 14px; }
 }
 
+/* ─── Responsive: Small tablet / large phone ─── */
 @media (max-width: 900px) {
   .hero-grid { flex-direction: column; text-align: center; }
-  .hero-sub { margin: 0 auto 32px; }
+  .hero-visual { order: -1; }
+  .hero-content h1 { font-size: 36px; }
+  .hero-sub { margin: 0 auto 32px; max-width: 100%; }
   .hero-btns { justify-content: center; }
   [dir="rtl"] .hero-btns .btn-secondary i { transform: none; }
-  .steps-row { flex-direction: column; align-items: center; gap: 40px; }
+  .hero-illustration { transform: scale(0.9); }
+  .steps-row { flex-direction: column; align-items: center; gap: 32px; }
   .step-conn { display: none; }
-  .step-card { max-width: 320px; }
-  [dir="rtl"] .hero-content h1 { text-align: center; }
-  [dir="rtl"] .hero-sub { text-align: center; }
+  .step-card { max-width: 360px; width: 100%; }
+  .step-card p { max-width: 100%; }
   .download-grid { flex-direction: column; text-align: center; gap: 40px; }
   .download-content { display: flex; flex-direction: column; align-items: center; }
   .dl-feat { text-align: left; width: 100%; max-width: 400px; }
   [dir="rtl"] .dl-feat { text-align: right; }
 }
 
+/* ─── Responsive: Phone ─── */
 @media (max-width: 768px) {
-  .hero { padding: 100px 0 48px; }
-  .hero-content h1 { font-size: 32px; }
+  .hero { padding: 100px 0 48px; min-height: auto; }
+  .hero-visual { order: -1; margin-bottom: -20px; }
+  .hero-content h1 { font-size: 28px; }
   .hero-sub { font-size: 15px; }
-  .hero-illustration { width: 260px; height: 260px; }
-  .hi-center-icon { width: 72px; height: 72px; font-size: 28px; }
-  .hi-card { font-size: 11px; padding: 8px 12px; gap: 6px; }
-  .hi-card i { font-size: 16px; width: 20px; }
-  .feat-grid { grid-template-columns: 1fr; }
-  .test-grid { grid-template-columns: 1fr; }
-  .download-mockup { display: none; }
+  .hero-badge { font-size: 11px; padding: 5px 12px; margin-bottom: 14px; }
+  .hero-illustration { transform: scale(0.85); }
+  .feat-grid { grid-template-columns: 1fr; gap: 16px; }
+  .feat-card { padding: 24px 20px; }
+  .feat-n { font-size: 36px; }
+  .test-grid { grid-template-columns: 1fr; gap: 16px; }
+  .test-card { padding: 24px 20px; }
+  .download-mockup { flex: 0 0 200px; }
+  .download-phone-img { max-width: 180px; }
   .download-features { gap: 12px; }
+  .dl-feat { padding: 14px 16px; }
+}
+
+/* ─── Responsive: Small phone ─── */
+@media (max-width: 480px) {
+  .hero { padding: 80px 0 32px; }
+  .hero-visual { order: -1; margin-bottom: -24px; }
+  .hero-content h1 { font-size: 24px; }
+  .hero-sub { font-size: 14px; margin-bottom: 24px; }
+  .hero-btns { flex-direction: column; align-items: stretch; }
+  .hero-btns .btn { width: 100%; justify-content: center; }
+  .hero-illustration { transform: scale(0.75); }
+  .feat-card { padding: 20px 16px; }
+  .feat-iw { width: 40px; height: 40px; font-size: 16px; }
+  .feat-card h3 { font-size: 15px; }
+  .feat-card p { font-size: 13px; }
+  .step-card { padding: 0 12px; }
+  .step-circle { width: 60px; height: 60px; font-size: 22px; }
+  .step-card h3 { font-size: 17px; }
+  .step-card p { font-size: 13px; }
+  .test-card { padding: 20px 16px; }
+  .test-t { font-size: 14px; }
+  .download-mockup { flex: 0 0 160px; }
+  .download-phone-img { max-width: 140px; }
+  .dl-feat { padding: 12px 14px; gap: 12px; }
+  .dl-feat h4 { font-size: 14px; }
+  .dl-feat p { font-size: 12px; }
+  .dl-icon { width: 36px; height: 36px; font-size: 14px; }
 }

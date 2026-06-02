@@ -23,10 +23,32 @@
 .v-card p { font-size: 13px; color: var(--text-secondary); line-height: 1.7; }
 
 @media (max-width: 1024px) { .v-grid { grid-template-columns: repeat(2, 1fr); } }
+
+@media (max-width: 900px) {
+  .a-story { gap: 40px; }
+  .a-story-title { font-size: 28px; }
+}
+
 @media (max-width: 768px) {
   .a-hero { padding: 100px 0 40px; }
-  .a-hero-title { font-size: 30px !important; }
+  .a-hero-title { font-size: 28px !important; }
+  .a-hero-p { font-size: 15px; }
   .a-story { flex-direction: column; gap: 32px; }
   .a-story-title { font-size: 26px; }
-  .v-grid { grid-template-columns: 1fr; }
+  .a-quote { width: 100%; }
+  .a-quote-text { font-size: 17px; }
+  .v-grid { grid-template-columns: 1fr; gap: 16px; }
+}
+
+@media (max-width: 480px) {
+  .a-hero { padding: 88px 0 32px; }
+  .a-hero-title { font-size: 24px !important; }
+  .a-story-title { font-size: 22px; }
+  .a-quote { padding: 28px 20px; }
+  .a-quote-text { font-size: 16px; }
+  .a-quote-icon { font-size: 36px; }
+  .v-card { padding: 20px 16px; }
+  .v-icon { width: 40px; height: 40px; font-size: 16px; }
+  .v-card h3 { font-size: 15px; }
+  .v-card p { font-size: 12px; }
 }

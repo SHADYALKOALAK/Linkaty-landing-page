@@ -35,9 +35,19 @@
 
 @media (max-width: 768px) {
   .footer { padding: 48px 0 24px; }
+  .footer-inner { gap: 32px; }
   .footer-top { flex-direction: column; text-align: center; }
   .footer-brand { flex-direction: column; text-align: center; }
-  .footer-cols { grid-template-columns: 1fr; text-align: center; gap: 24px; }
+  .footer-cols { grid-template-columns: 1fr; text-align: center; gap: 28px; }
   [dir="rtl"] .footer-cols { text-align: center; }
-  .footer-bottom { flex-direction: column; text-align: center; }
+  .footer-bottom { flex-direction: column; text-align: center; gap: 8px; font-size: 12px; }
+}
+
+@media (max-width: 480px) {
+  .footer { padding: 40px 0 20px; }
+  .footer-logo-img { height: 32px; }
+  .footer-name { font-size: 16px; }
+  .footer-social a { width: 34px; height: 34px; font-size: 12px; }
+  .footer-col h4 { font-size: 13px; }
+  .footer-col a { font-size: 13px; }
 }
