@@ -4,7 +4,7 @@ const t = {
     appNameFull: 'Linkaty – لينكاتي',
     tagline: 'Professional Portfolio Platform',
 
-    nav: { home: 'Home', features: 'Features', about: 'About', contact: 'Contact', cta: 'Get Started' },
+    nav: { home: 'Home', features: 'Features', about: 'About', contact: 'Contact', cta: 'Download App' },
 
     hero: {
       badge: 'Professional Portfolio Platform',
@@ -85,6 +85,14 @@ const t = {
       title: 'Ready to build your professional identity?',
       sub: 'Join thousands of developers who use Linkaty to showcase their work.',
       btn: 'Create Your Linkaty',
+    },
+
+    downloadApp: {
+      badge: 'Mobile App',
+      title: 'Download',
+      titleHl: 'Linkaty App',
+      sub: 'Get the full experience on your mobile device. Install the Linkaty app now.',
+      btn: 'Download from APKPure',
     },
 
     about: {
@@ -224,7 +232,7 @@ const t = {
     appNameFull: 'Linkaty – لينكاتي',
     tagline: 'منصة البروفايل الاحترافي',
 
-    nav: { home: 'الرئيسية', features: 'المميزات', about: 'عن لينكاتي', contact: 'اتصل بنا', cta: 'ابدأ الآن' },
+    nav: { home: 'الرئيسية', features: 'المميزات', about: 'عن لينكاتي', contact: 'اتصل بنا', cta: 'تنزيل التطبيق' },
 
     hero: {
       badge: 'منصة البروفايل الاحترافي',
@@ -305,6 +313,14 @@ const t = {
       title: 'هل أنت مستعد لبناء هويتك المهنية؟',
       sub: 'انضم إلى آلاف المطورين الذين يستخدمون لينكاتي لعرض أعمالهم.',
       btn: 'أنشئ رابطك الآن',
+    },
+
+    downloadApp: {
+      badge: 'تطبيق الجوال',
+      title: 'حمل',
+      titleHl: 'تطبيق لينكاتي',
+      sub: 'احصل على التجربة الكاملة على هاتفك. حمل تطبيق لينكاتي الآن.',
+      btn: 'تحميل من APKPure',
     },
 
     about: {

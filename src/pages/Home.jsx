@@ -144,18 +144,55 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── CTA ─── */}
-      <section className="section">
+      {/* ─── Download App ─── */}
+      <section className="section" style={{background:'var(--bg-alt)'}} id="download">
         <div className="container">
-          <div className="cta-box reveal">
-            <h2>{t('cta.title')}</h2>
-            <p>{t('cta.sub')}</p>
-            <Link to="/" className="btn cta-btn">
-              <i className="fas fa-magic" /> {t('cta.btn')}
-            </Link>
+          <div className="section-header reveal">
+            <div className="section-label"><i className="fas fa-mobile-alt" /> {t('downloadApp.badge')}</div>
+            <h2>{t('downloadApp.title')} <span className="hl">{t('downloadApp.titleHl')}</span></h2>
+            <p>{t('downloadApp.sub')}</p>
+          </div>
+          <div className="download-grid reveal">
+            <div className="download-mockup">
+              <img src="/mock_up_01.png" alt="Linkaty App" className="download-phone-img" />
+            </div>
+            <div className="download-content">
+              <div className="download-features">
+                <div className="dl-feat reveal">
+                  <span className="dl-icon"><i className="fas fa-bolt" /></span>
+                  <div>
+                    <h4>{lang === 'ar' ? 'أداء سريع' : 'Fast Performance'}</h4>
+                    <p>{lang === 'ar' ? 'تجربة سلسة وسريعة على جهازك' : 'Smooth and fast experience on your device'}</p>
+                  </div>
+                </div>
+                <div className="dl-feat reveal reveal-d2">
+                  <span className="dl-icon"><i className="fas fa-bell" /></span>
+                  <div>
+                    <h4>{lang === 'ar' ? 'إشعارات فورية' : 'Instant Notifications'}</h4>
+                    <p>{lang === 'ar' ? 'ابق على اطلاع بكل جديد' : 'Stay updated with everything new'}</p>
+                  </div>
+                </div>
+                <div className="dl-feat reveal reveal-d3">
+                  <span className="dl-icon"><i className="fas fa-shield-alt" /></span>
+                  <div>
+                    <h4>{lang === 'ar' ? 'آمن وموثوق' : 'Secure & Reliable'}</h4>
+                    <p>{lang === 'ar' ? 'بياناتك محمية بأعلى معايير الأمان' : 'Your data is protected with top security'}</p>
+                  </div>
+                </div>
+              </div>
+              <a
+                href="https://apkpure.com/p/com.rowad_shady.linkaty"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary download-btn"
+              >
+                <i className="fas fa-download" /> {t('downloadApp.btn')}
+              </a>
+            </div>
           </div>
         </div>
       </section>
+
     </div>
   )
 }

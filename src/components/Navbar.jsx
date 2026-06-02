@@ -41,12 +41,12 @@ export default function Navbar() {
               {l.label}
             </Link>
           ))}
-          <Link to="/" className="btn btn-primary nav-cta-btn">
-            <i className="fas fa-rocket" /> {t('nav.cta')}
-          </Link>
         </div>
 
         <div className="nav-right">
+          <a href="#download" className="btn btn-primary nav-cta-btn">
+            <i className="fas fa-download" /> {t('nav.cta')}
+          </a>
           <button className="lang-toggle" onClick={toggleLanguage} aria-label="Toggle language">
             {lang === 'en' ? 'AR' : 'EN'}
           </button>
